@@ -1,41 +1,41 @@
-<div class="container">
-  <h1 align="center">Employee Form</h1>
+<div class="myform">
+  <h1 align="center">Employee Management Form</h1>
   <form #form="ngForm">
-    <div class="form-group">
+    <div class="employee">
       <label>First Name:</label>
-      <input type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname">
+      <input type="text" class="form-control" name="firstname" [(ngModel)]="model.firstname"/>
       </div>
         <br> 
-    <div class="form-group">
+    <div class="employee">
       <label>Last Name:</label>
-      <input type="text" class="form-control" name="lastname" [(ngModel)]="model.lastname">
+      <input type="text" class="form-control" name="lastname" [(ngModel)]="model.lastname"/>
       </div><br>
-      <div class="form-group">
+      <div class="employee">
       <label>Email:</label>
-      <input type="email" class="form-control" name="email" [(ngModel)]="model.email">
+      <input type="email" class="form-control" name="email" [(ngModel)]="model.email"/>
       </div><br>
-    <div class="form-group">
+    <div class="employee">
       <label>Contact Number</label>
-      <input type="text" class="form-control" name="contact" [(ngModel)]="model.contact">
+      <input type="text" class="form-control" name="contact" [(ngModel)]="model.contact"/>
       </div><br>
-      <div class="form-group">
+      <div class="employee">
       <label>Address</label>
-      <input type="textarea" class="form-control" name="address" [(ngModel)]="model.address">
+      <input type="textarea" class="form-control" name="address" [(ngModel)]="model.address"/>
       </div><br>
-    <div class="form-group">
+    <div class="employee">
       <label>Username</label>
-      <input type="text" class="form-control" name="username" [(ngModel)]="model.username">
+      <input type="text" class="form-control" name="username" [(ngModel)]="model.username"/>
       </div><br>
-    <div class="form-group">
+    <div class="employee">
       <label>Password</label>
       <input type="password" class="form-control" name="password" [(ngModel)]="model. password">
       </div><br>
-    <div class="radio">
+    <div class="egender">
       <label>Gender:</label><br>
-      <input type="radio" name="gender" value="Male"  [(ngModel)]="model.gender">Male<br>
-       <input type="radio" name="gender" value="Female" [(ngModel)]="model.gender">Female
+      <input type="radio" name="gender" value="Male"  [(ngModel)]="model.gender"/>Male<br>
+       <input type="radio" name="gender" value="Female" [(ngModel)]="model.gender"/>Female
       </div><br>
-      <div class="form-group">
+      <div class="qualify">
         <label>Qualification:</label><br>
         <select class="form-control" name="qualification" [(ngModel)]="model.qualification">
           <option *ngFor="let qua of qualifications">
@@ -53,8 +53,8 @@
              </div><br>
    <div class="form-group">
   <label>Coding_language</label><br>
-  <div *ngFor = "let lang of coding_languages">
-    <input type="checkbox" name="coding_languages"  [ngModel]="model.coding_languages" (change)="check(lang)">
+  <div *ngFor = "let lang of languages">
+    <input type="checkbox" name="languages"   (change)="check(lang)"/>
     {{lang}}
    </div>
    </div><br>
